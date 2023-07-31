@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import QuestionHandler from './components/QuestionHandler';
+import Display from './components/Display';
+import Score from './components/Score';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  let [question, setQuestion] = useState([{}])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+		<div className='App'>
+			<h1>Trivia Time!</h1>
+			<Score />
+			<QuestionHandler setQuestion={setQuestion} />
+			<Display question={question} />
+		</div>
+	);
 }
 
 export default App;
