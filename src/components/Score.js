@@ -16,10 +16,12 @@ const Score = () => {
 
     return (
         <div>
-            <h1>Score: {score}</h1>
-            <button onClick={decreaseScore}>Decrease</button>
-            <button onClick={increaseScore}>Increase</button>
-            <button onClick={resetScore}>Reset</button>
+            <h1 className="score">Score: {score}</h1>
+            <div className="buttonContainer">
+                <button className="decrease" onClick={decreaseScore}>Decrease</button>
+                <button className="increase" onClick={increaseScore}>Increase</button>
+                <button className="reset" onClick={resetScore}>Reset</button>
+            </div>
         </div>
     )
 }

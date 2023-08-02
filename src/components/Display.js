@@ -9,17 +9,17 @@ function Display (props) {
 			<div>
 				{question.map((item) => (
 					<div key={item.question}>
-						<h1 key={item.category}>Category: {item.category.title}</h1>
-						<h1 key={item.value}>Value: {item.value}</h1>
-						<h1 key={item.question}>Question: {item.question}</h1>
+						<h1 className="category" key={item.category.title}>Category: {item.category.title}</h1>
+						<h1 className="value" key={item.value}>Value: {item.value}</h1>
+						<h1 className="question" key={item.question}>Question: {item.question}</h1>
 						{
 						answer?<div>
-							<h1 key={item.answer}>Answer: {item.answer}</h1>
+							<h1 className="answer" key={item.answer}>Answer: {item.answer}</h1>
 						</div>: null
 						}
 					</div>
 				))}
-				<button onClick={() => {setAnswer(!answer)}}>Toggle Answer</button>
+				<button className="answerButton" onClick={() => {setAnswer(!answer)}}>Toggle Answer</button>
 			</div>
 		);
     

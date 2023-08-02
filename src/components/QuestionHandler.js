@@ -11,8 +11,12 @@ const QuestionHandler = (props) => {
     }
  
      return (
-        <button onClick={fetchQuestion}>Get Question</button>
-    )
+				<div>
+					<button className='questionButton' onClick={fetchQuestion}>
+						Get Question
+					</button>
+				</div>
+			);
 }
 
 export default QuestionHandler;

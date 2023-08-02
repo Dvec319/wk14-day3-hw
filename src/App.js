@@ -6,11 +6,11 @@ import './App.css';
 
 function App() {
 
-  let [question, setQuestion] = useState([{}])
+  let [question, setQuestion] = useState([])
 
   return (
 		<div className='App'>
-			<h1>Trivia Time!</h1>
+			<h1 className='title'>Trivia Time!</h1>
 			<Score />
 			<QuestionHandler setQuestion={setQuestion} />
 			<Display question={question} />
